@@ -1,0 +1,33 @@
+{
+  "presets": ["next/babel"],
+  "plugins": [
+    [
+      "styled-components",
+      {
+        "ssr": true,
+        "displayName": true,
+        "preprocess": false
+      }
+    ],
+    [
+      "module-resolver",
+      {
+        "root": [
+          "."
+        ],
+        "extensions": [
+          ".ts",
+          ".tsx"
+        ],
+        "alias": {
+          "@home": "./src/components/home",
+          "@virtual": "./src/components/virtual",
+          "@styles": "./src/styles",
+          "@store": "./src/store",
+          "@actions": "./src/store/actions",
+          "@mock": "./__mock__"
+        }
+      }
+    ]
+  ]
+}

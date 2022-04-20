@@ -7,7 +7,7 @@ interface Props {
 
 type HoverElement = HTMLDivElement | HTMLSpanElement;
 
-type ReturnValue<T> = [React.MutableRefObject<T> | null, boolean];
+type ReturnValue<T> = [React.MutableRefObject<T | null> | null, boolean];
 
 export default function useHover<T extends HoverElement>({ onCallback, offCallback }: Props = {}): ReturnValue<T> {
   const [isHover, setIsHover] = useState(false);
